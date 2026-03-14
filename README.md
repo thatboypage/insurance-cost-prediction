@@ -109,7 +109,7 @@ Features such as **sex and region had minimal impact** on predictions.
 
 ## Project Structure
 
-Medical insurance/
+insurance-cost-prediction/
 │
 ├── 01_EDA.ipynb
 ├── 02_Modeling.ipynb
@@ -182,7 +182,7 @@ print("Predicted Insurance Charge:", prediction[0])
 
 ## Future Improvements
 
-Possible future improvements for this project include:
+Potential future improvements include:
 
 - Building a prediction API using FastAPI
 
