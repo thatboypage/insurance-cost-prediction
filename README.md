@@ -1,5 +1,15 @@
 # Medical Insurance Cost Prediction
 
+## Project Highlights
+
+- Built a machine learning model to predict **medical insurance charges**
+- Performed **exploratory data analysis (EDA)** to understand cost drivers
+- Applied **feature engineering** to capture nonlinear relationships and interaction effects
+- Compared multiple models including **Linear Regression, Random Forest, and XGBoost**
+- Tuned a **Random Forest model using randomized search and cross-validation**
+- Achieved **R² ≈ 0.898**, explaining nearly **90% of the variance in insurance costs**
+- Identified key predictors including **age, smoking status, and BMI interactions**
+
 ## Project Overview
 
 This project builds a machine learning model to predict individual medical insurance charges based on demographic and health-related attributes such as age, BMI, smoking status, number of children, gender, and region.
@@ -88,9 +98,17 @@ The most influential predictors were:
 
 Features such as **sex and region had minimal impact** on predictions.
 
+## Key Insights
+
+- **Age** is the strongest predictor of medical insurance charges.
+- **Smoking significantly increases healthcare costs**, especially when combined with high BMI.
+- The interaction between **BMI and smoking status** is one of the most influential drivers of insurance expenses.
+- **Gender and geographic region contribute very little** to the prediction of medical charges.
+
 ---
 
 ## Project Structure
+
 Medical insurance/
 │
 ├── 01_EDA.ipynb
@@ -135,9 +153,11 @@ import pandas as pd
 
 model = joblib.load("tuned_random_forest_model.pkl")
 features = joblib.load("model_features.pkl")
+```
 
-Example Prediction
+### Example Prediction
 
+```python
 sample = pd.DataFrame({
     "age": [45],
     "sex": [1],
@@ -157,15 +177,18 @@ prediction_log = model.predict(sample)
 prediction = np.expm1(prediction_log)
 
 print("Predicted Insurance Charge:", prediction[0])
+```
+---
 
-Future Improvements
+## Future Improvements
 
 Possible future improvements for this project include:
 
-Building a prediction API using FastAPI
+- Building a prediction API using FastAPI
 
-Creating an interactive Streamlit dashboard
+- Creating an interactive Streamlit dashboard
 
-Performing advanced hyperparameter optimization
+- Performing advanced hyperparameter optimization
 
-Exploring additional ensemble models
+- Exploring additional ensemble models
+---
