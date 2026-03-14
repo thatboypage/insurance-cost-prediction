@@ -108,7 +108,7 @@ Features such as **sex and region had minimal impact** on predictions.
 ---
 
 ## Project Structure
-
+```
 insurance-cost-prediction/
 │
 ├── 01_EDA.ipynb
@@ -119,7 +119,7 @@ insurance-cost-prediction/
 ├── model_features.pkl
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Technologies Used
